@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Link from '@/components/Link';
+import Link from '@/components/Link/Link';
 import ProTip from '@/components/ProTip';
 import Copyright from '@/components/Copyright';
 
@@ -20,7 +20,7 @@ export default function About() {
                 }}
             >
                 <Typography variant="h4" component="h1" gutterBottom>
-                    Material UI - Next.js example in TypeScript
+                    Material UI A - Next.js example in TypeScript
                 </Typography>
                 <Box sx={{ maxWidth: 'sm' }}>
                     <Button variant="contained" component={Link} noLinkStyle href="/">
