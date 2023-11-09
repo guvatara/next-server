@@ -1,8 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "prettier"],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "prettier", "plugin:@next/next/recommended"],
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
     "react/prop-types": 0
   }
 }
