@@ -21,6 +21,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import SupportIcon from "@mui/icons-material/Support";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
+import { TopMenu } from "@/components/TopMenu";
 
 export const metadata = {
   title: "Next.js App Router + Material UI v5",
@@ -41,6 +42,32 @@ const PLACEHOLDER_LINKS = [
   { text: "Support", icon: SupportIcon },
   { text: "Logout", icon: LogoutIcon },
 ];
+
+const menu: { title: string; list: { name: string; action?: () => void }[] }[] =
+  [
+    {
+      title: "Home",
+      list: [
+        {
+          name: "Blogs",
+        },
+        {
+          name: "Magazine",
+        },
+      ],
+    },
+    {
+      title: "Blog",
+      list: [
+        {
+          name: "List",
+        },
+        {
+          name: "List Card",
+        },
+      ],
+    },
+  ];
 
 export default function RootLayout({
   children,
@@ -64,6 +91,9 @@ export default function RootLayout({
                 Next.js App Router
               </Typography>
             </Toolbar>
+          </AppBar>
+          <AppBar position="fixed" sx={{ zIndex: 2000 }}>
+            <TopMenu menu={menu} />
           </AppBar>
           <Drawer
             sx={{
