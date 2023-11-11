@@ -44,30 +44,30 @@ const PLACEHOLDER_LINKS = [
 ];
 
 const menu: { title: string; list: { name: string; action?: () => void }[] }[] =
-  [
-    {
-      title: "Home",
-      list: [
+    [
         {
-          name: "Blogs",
+            title: "Home",
+            list: [
+                {
+                    name: "Blogs",
+                },
+                {
+                    name: "Magazine",
+                },
+            ],
         },
         {
-          name: "Magazine",
+            title: "Blog",
+            list: [
+                {
+                    name: "List",
+                },
+                {
+                    name: "List Card",
+                },
+            ],
         },
-      ],
-    },
-    {
-      title: "Blog",
-      list: [
-        {
-          name: "List",
-        },
-        {
-          name: "List Card",
-        },
-      ],
-    },
-  ];
+    ];
 
 export default function RootLayout({
   children,
@@ -90,11 +90,12 @@ export default function RootLayout({
               <Typography variant="h6" color="text.primary">
                 Next.js App Router
               </Typography>
+                <Box>
+                    <TopMenu menu={menu} />
+                </Box>
             </Toolbar>
           </AppBar>
-          <AppBar position="fixed" sx={{ zIndex: 2000 }}>
-            <TopMenu menu={menu} />
-          </AppBar>
+
           <Drawer
             sx={{
               width: DRAWER_WIDTH,

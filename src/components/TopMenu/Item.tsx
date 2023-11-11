@@ -38,6 +38,7 @@ export const Item: React.FC<ItemI> = ({ title, list }) => {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
+        sx={{ zIndex: 2000 }}
       >
         {list &&
           list.length > 0 &&
